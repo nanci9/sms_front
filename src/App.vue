@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-  <Header></Header>
+  <!-- <Header></Header> -->
     <router-view />  <!-- 用于渲染当前匹配的组件 -->
   </div>
 </template>
