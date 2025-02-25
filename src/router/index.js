@@ -1,28 +1,33 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-import Home from '@/views/home/index.vue'
-import Submit from '@/views/submit/index.vue'
-import Success from '@/views/success/index.vue'
+import VueRouter from 'vue-router'
+import Home from '../views/home/index.vue'
+import Business from '../views/business/index.vue'
+import Welfare from '../views/welfare/index.vue'
 
-Vue.use(Router)
+Vue.use(VueRouter)
 
-export default new Router({
-  mode: 'history',  // 使用 history 模式避免 URL 中带有 #，如果需要
-  routes: [
-    {
-      path: '/',
-      name: 'Home',
-      component: Home
-    },
-    {
-      path: '/submit',
-      name: 'Submit',
-      component: Submit
-    },
-    {
-      path: '/success',
-      name: 'Success',
-      component: Success
-    }
-  ]
+const routes = [
+  {
+    path: '/',
+    name: 'Home',
+    component: Home
+  },
+  {
+    path: '/business',
+    name: 'Business',
+    component: Business
+  },
+  {
+    path: '/welfare',
+    name: 'Welfare',
+    component: Welfare
+  }
+]
+
+const router = new VueRouter({
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes
 })
+
+export default router

@@ -17,13 +17,22 @@ export default {
 </script>
 
 <style>
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+#app {
+  height: 100%;
+  overflow: hidden;
+}
+
 #app {
   html,
   body,
   #app{
-    height: 100%;
-    margin: 0;
-    padding: 0;
     background-color: rgb(247, 248, 249);
   }
 }
